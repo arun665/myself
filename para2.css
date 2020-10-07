@@ -1,0 +1,108 @@
+.loader{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 500px;
+    transform: rotateX(60deg);
+    transform-style: preserve-3d;
+    perspective: 500px;
+    position: relative;
+}
+.loader .circle{
+    border: 20px solid var(--color);
+    border-radius: 500px;
+    box-shadow: 0px 4px 4px var(--color), 0px 4px 8px var(--color) inset, 0px 4px 10px var(--color) inset;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.loader .circle:nth-child(1){
+    --color:#240046;
+    animation: animate1 2s ease-in-out infinite;
+    animation-delay: calc(0 * (2s / 7));
+}
+.loader .circle:nth-child(2){
+    --color:#3C096C;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    animation: animate2 2s ease-in-out infinite;
+    animation-delay: calc(1 * (2s / 7));
+}
+.loader .circle:nth-child(3){
+    --color:#5A189A;
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    animation: animate3 2s ease-in-out infinite;
+    animation-delay: calc(2 * (2s / 7));
+}
+.loader .circle:nth-child(4){
+    --color:#7B2CBF;
+    top: 60px;
+    bottom: 60px;
+    left: 60px;
+    right: 60px;
+    animation: animate4 2s ease-in-out infinite;
+    animation-delay: calc(3 * (2s / 7));
+}
+.loader .circle:nth-child(5){
+    --color:#9D4EDD;
+    top: 80px;
+    bottom: 80px;
+    left: 80px;
+    right: 80px;
+    animation: animate5 2s ease-in-out infinite;
+    animation-delay: calc(4 * (2s / 7));
+}
+.loader .circle:nth-child(6){
+    --color:#C77DFF;
+    top: 100px;
+    bottom: 100px;
+    left: 100px;
+    right: 100px;
+    animation: animate6 2s ease-in-out infinite;
+    animation-delay: calc(5 * (2s / 7));
+}
+.loader .circle:nth-child(7){
+    --color:#E0AAFF;
+    top: 120px;
+    bottom: 120px;
+    left: 120px;
+    right: 120px;
+    animation: animate7 2s ease-in-out infinite;
+    animation-delay: calc(6 * (2s / 7));
+}
+@keyframes animate1{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(0 * 20px * -1)); }
+}
+@keyframes animate2{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(1 * 20px * -1)); }
+}
+@keyframes animate3{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(2 * 20px * -1)); }
+}
+@keyframes animate4{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(3 * 20px * -1)); }
+}
+@keyframes animate5{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(4 * 20px * -1)); }
+}
+@keyframes animate6{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(5 * 20px * -1)); }
+}
+@keyframes animate7{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(6 * 20px * -1)); }
+}
+License Terms
