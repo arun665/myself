@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="para.css" > 
+<link rel="stylesheet" href="para2.css" > 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style type="text/css">
+.loader{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 500px;
+    transform: rotateX(60deg);
+    transform-style: preserve-3d;
+    perspective: 500px;
+    position: relative;
+}
+.loader .circle{
+    border: 20px solid var(--color);
+    border-radius: 500px;
+    box-shadow: 0px 4px 4px var(--color), 0px 4px 8px var(--color) inset, 0px 4px 10px var(--color) inset;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.loader .circle:nth-child(1){
+    --color:#240046;
+    animation: animate1 2s ease-in-out infinite;
+    animation-delay: calc(0 * (2s / 7));
+}
+.loader .circle:nth-child(2){
+    --color:#3C096C;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    animation: animate2 2s ease-in-out infinite;
+    animation-delay: calc(1 * (2s / 7));
+}
+.loader .circle:nth-child(3){
+    --color:#5A189A;
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    animation: animate3 2s ease-in-out infinite;
+    animation-delay: calc(2 * (2s / 7));
+}
+.loader .circle:nth-child(4){
+    --color:#7B2CBF;
+    top: 60px;
+    bottom: 60px;
+    left: 60px;
+    right: 60px;
+    animation: animate4 2s ease-in-out infinite;
+    animation-delay: calc(3 * (2s / 7));
+}
+.loader .circle:nth-child(5){
+    --color:#9D4EDD;
+    top: 80px;
+    bottom: 80px;
+    left: 80px;
+    right: 80px;
+    animation: animate5 2s ease-in-out infinite;
+    animation-delay: calc(4 * (2s / 7));
+}
+.loader .circle:nth-child(6){
+    --color:#C77DFF;
+    top: 100px;
+    bottom: 100px;
+    left: 100px;
+    right: 100px;
+    animation: animate6 2s ease-in-out infinite;
+    animation-delay: calc(5 * (2s / 7));
+}
+.loader .circle:nth-child(7){
+    --color:#E0AAFF;
+    top: 120px;
+    bottom: 120px;
+    left: 120px;
+    right: 120px;
+    animation: animate7 2s ease-in-out infinite;
+    animation-delay: calc(6 * (2s / 7));
+}
+@keyframes animate1{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(0 * 20px * -1)); }
+}
+@keyframes animate2{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(1 * 20px * -1)); }
+}
+@keyframes animate3{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(2 * 20px * -1)); }
+}
+@keyframes animate4{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(3 * 20px * -1)); }
+}
+@keyframes animate5{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(4 * 20px * -1)); }
+}
+@keyframes animate6{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(5 * 20px * -1)); }
+}
+@keyframes animate7{
+    0%, 100%{ transform: translateZ(0); }
+    50%{ transform: translatez(calc(6 * 20px * -1)); }
+}
+License Terms
+body{
+    background:black;
+}
+.parallaxone{
+    background-image: url("arun.jpg");
+    width:100%;
+    height:700px;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.parallaxtwo{
+    background-image: url("paralax4.jpeg");
+    width:100%;
+    height:700px;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.card-header{
+    background-color: peru;
+    color:white;
+}
+.card-body{
+    background-color:#FFFFCC;
+    color:blueviolet;
+    font-size:2em;
+    font-style: italic;
+
+}
+.skill.h1{
+    font-size: 40px;
+    color:white;
+
+}
+.skill{
+    background-color:purple;
+    border-radius:10px;
+    color:white;
+    height:100px;
+    text-align:center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top:1em;
+    margin-bottom: 1em;
+
+
+}
+
+.interest.h1{
+    font-size: 40px;
+    color:white;
+
+}
+.interest{
+    background-color:black;
+    border-radius:10px;
+    color:orange;
+    border:2px solid orange;
+    border-color:orange;
+
+    height:100px;
+    text-align:center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top:1em;
+    margin-bottom: 1em;
+
+
+}
+.interest1.h1{
+    font-size: 40px;
+    color:#606060FF;
+
+}
+.interest1{
+    background-color:#D6ED17FF;
+    border-radius:10px;
+    color:#606060FF;
+    border:2px solid orange;
+    border-color:orange;
+
+    height:100px;
+    text-align:center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top:1em;
+    margin-bottom: 1em;
+
+
+}
+.card-footer{
+    background-color:#FFFFCC;
+    color:blueviolet;
+    font-size:2em;
+    font-style: italic;
+
+}
+.card{
+    margin-bottom: 3em;
+}
+
+.inner{
+
+    color:white;
+    text-align:center;
+  
+}
+.project{
+    background-color:royalblue;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align:center;
+    border-radius: 10px;
+font-size:50px;
+    color:white;
+    height:80px;
+    align-items: center;
+    
+}
+.project>h1{
+    vertical-align: center;
+    margin:auto;
+}
+.row{
+    margin-top:100px;
+    margin-bottom:50px;
+}
+.header.a{
+    color:white;
+    font-size:30px;
+    size:30px;
+}
+.row{
+
+ text-align:center;
+
+    margin-top:200px;
+    margin-bottom:100px;
+    
+}
+.about{
+    border:2px solid white;
+    color:white;
+    margin:10px;
+    border-radius:5px;
+}
+.about>p{
+    text-align:center;
+    font-size: 1.5em;
+}
+.jumbotron{
+    background:black;
+}
+
+.inner>h1{
+    font-size:8em;
+    animation : slide_Up 1.4s ease;
+}
+.inner>p{
+    font-size:3em;
+    animation : slide_Up 2.4s ease;
+    color:greenyellow;
+}
+.connect2>p{
+    font-size:3em;
+
+    color:greenyellow;
+    align-items: center;
+    text-align: center;
+}
+.end{
+    align-items: center;
+}
+
+
+@keyframes slide_Up{
+0%{
+    transform:translateY(250px);
+}
+100%{
+    transform:translate();
+}
+
+
+}
+
+    .fa {
+  padding: 20px;
+  font-size: 50px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+    .p1{
+
+        width:100%;
+        height:600px;
+        background-image:url(first.jpg);
+        background-size:100% 100%;
+        background-attachment: fixed;
+
+
+    }
+
+    .p2{
+
+width:100%;
+height:600px;
+background-image:url(sec.jpg);
+background-size:100% 100%;
+background-attachment: fixed;
+
+
+    }
+    
+
+    </style>
+    <script src="typed.js">
+
+
+    </script>
+</head>
+
+<body>
+
+<div class="row">
+    <div class="col-md-8" >
+        <div class="container" >
+            <div class="inner">
+                <h1> Arun Sharma </h1>
+                <p > <span class="animate"></span> </p>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+            <div class="loader">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+
+        </div>
+    <br>   
+    </div>
+
+  
+      <div class="jumbotron">
+
+<div class="about">
+        <h1> About</h1>
+        <p text-align="center" > I am currently pursuing beachelor of engineering degree in Computer Science at Chitkara Universirty. I have scored 10 cgpa in 10th class. very much passionate and very hard working . I work for myself not for anyone lese.
+            i have done various projects of web development and front end development and other projects. My cgpa in my first year was 9.98 and i will try to keep it consistent.
+
+
+        </p>
+      </div>
+      </div>
+      
+<div class="jumbotron">
+      <div class="parallaxone">
+      </div>
+    </div>
+      <div class="container">
+<br>
+<div class="Projects"  id="projects">      
+<div class="container" data-aos="fade-up">
+
+         <div class="project">
+    <h1>Projects</h1>
+  </div>
+  </div>
+
+
+
+    <div class="container" data-aos="flip-left">
+
+        <div class="card">
+          <div class="card-header"><h1> Graphic User Interface </h1></div>
+          <div class="card-body">graphic user interface made by using Java Swing, java xml, on netbeans ide with Mysql server, the link of the project is given below.</div> 
+          <div class="card-footer"> project link =" " </div>
+        </div>
+      </div>
+
+      
+    <div class="container" data-aos="flip-down">
+
+        <div class="card">
+          <div class="card-header"><h1> E-commerce Website </h1></div>
+          <div class="card-body">  an e-commerce website which is based on an university. the site tells us all about the university with various fees ayment gateways.
+
+          </div> 
+          <div class="card-footer"> project link =" " </div>
+        </div>
+      </div>
+
+
+      
+    <div class="container" data-aos="flip-up">
+
+        <div class="card">
+          <div class="card-header"><h1> App development </h1></div>
+          <div class="card-body">  Tic-tac-toe game and calculator   app made using android studio working on android using java.xml.the link will be provided below with other similar apps
+          </div> 
+          <div class="card-footer"> project link =" " </div>
+        </div>
+      </div>
+
+      
+
+</div>
+
+
+
+      
+<br>
+<div class="skills" id="skills">
+<div class="project" data-aos="fade-down">
+
+    <h1> Skills </h1>
+      
+  </div>
+
+  <div class="skill" data-aos="flip-up">
+
+    <h1> Java </h1>
+      
+  </div>
+  <div class="skill" data-aos="fade-left">
+
+    <h1> 
+        
+        Python 
+        
+    </h1>
+      
+  </div>
+
+  <div class="skill" data-aos="fade-right">
+
+    <h1> c/c++</h1>
+      
+  </div>
+
+  <div class="skill" data-aos="fade-down">
+
+    <h1> Javascript </h1>
+      
+  </div>
+
+  <div class="skill" data-aos="fade-up">
+
+    <h1> HTML% , CSS3 </h1>
+      
+  </div>
+  </div>
+
+
+  <div class="jumbotron">
+    <div class="parallaxtwo">
+    </div>
+  </div>
+    
+<br>
+  
+      
+<br>
+<div class="Interests" id="interests">
+<div class="project" data-aos="zoom-in">
+
+    <h1> Field of Interests </h1>
+      
+  </div>
+
+  <div class="interest" data-aos="flip-up">
+
+    <h1> Web Development </h1>
+      
+  </div>
+  <div class="interest" data-aos="fade-left">
+
+    <h1> 
+        
+        Software Development
+        
+    </h1>
+      
+  </div>
+  <div class="interest" data-aos="flip-up">
+
+    <h1> App Development </h1>
+      
+  </div>
+
+  </div>
+
+
+  <div class="accomplishments" id="accomplishments">
+    <div class="project" data-aos="zoom-in">
+    
+        <h1> Accomplishments </h1>
+          
+      </div>
+    
+      <div class="interest1" data-aos="zoom-out-down">
+    
+        <h1> HACKERANK 5 STAR IN JAVA, C, PYTHON </h1>
+          
+      </div>
+      
+      <div class="interest1" data-aos="zoom-out-right">
+    
+        <h1> HACKERANK 5 STAR IN PROBLEM SOLVING </h1>
+          
+      </div>
+      <div class="interest1" data-aos="zoom-out-down">
+    
+        <h1> 
+            
+            RANK 1 ON HACKERRANK IN JAVA
+            
+        </h1>
+          
+      </div>
+      <div class="interest1" data-aos="zoom-out-up">
+    
+        <h1>   
+            LEET CODE 2-STAR (100 SOLVED QUESTIONS)
+        </h1>
+          
+      </div>
+            
+      <div class="interest1" data-aos="zoom-out-left">
+    
+        <h1>   
+         83.4 PERCENTILE IN JEE MAINS
+        </h1>
+          
+      </div>
+      <div class="interest1" data-aos="zoom-out-right">
+    
+        <h1>   
+            NCC A-CERTIFICATE HOLDER
+        </h1>
+          
+      </div>
+      </div>
+    
+  
+  
+
+  
+
+
+  
+
+  </div>  
+  <div class="end" id="connect">
+  <div class="jumbotron">
+      <div class="connect2">
+    <p > <span class="connect"></span> </p>
+    </div>
+  </div>
+  
+
+
+  <div class="row">
+    <div class="col-md-3" >
+        <div class="container" >
+            <div class="inner1">
+                <a href="https://twitter.com/arunsha93341569" class="fa fa-twitter"></a>    
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-3" >
+            <div class="container" >
+                <div class="inner1">
+                    <a href="https://www.instagram.com/ar.un8932/?hl=en" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            </div>
+    
+            <div class="col-md-3" >
+                <div class="container" >
+                    <div class="inner1">
+                        <a href="https://www.linkedin.com/in/arun-sharma-98b8881a6/" class="fa fa-linkedin"> </a>    
+                    </div>
+                </div>
+                </div>
+        
+                <div class="col-md-3" >
+                    <div class="container" >
+                        <div class="inner1">
+                     
+<a href="#" class="fa fa-facebook"></a>   
+                        </div>
+                    </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-md-4" >
+                        <div class="container" >
+                            <div class="inner">
+                       
+               
+                  <h2> arunsharmamoh@gmail.com</h2>
+                  <h2> arun0318.cse19@chitkara.edu.in</h2> 
+                    
+                            </div>
+                        </div>
+                        </div>
+            
+                           
+
+               
+                         
+    <br>   
+    </div>
+ </div>
+    <br>
+    <br>
+    <br>
+    <br>
+     
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+
+        offset: 250,
+        duration:1000, 
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var typed = new Typed('.animate', {
+       strings:[
+           'front-end developer','web developer','Competitive-Programmer'
+       ]
+       ,typeSpeed:50,
+       backSpeed:50,
+       loop:true
+        });
+
+        var typed2 = new Typed('.connect', {
+       strings:[
+           'Lets get Connected on','Linkedin','Instagram','e-mail','facebook'
+       ]
+       ,typeSpeed:50,
+       backSpeed:50,
+       loop:true
+        });
+      </script>
+</body>
